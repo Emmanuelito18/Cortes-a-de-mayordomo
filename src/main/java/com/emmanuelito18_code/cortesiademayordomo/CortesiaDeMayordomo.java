@@ -5,7 +5,6 @@
 package com.emmanuelito18_code.cortesiademayordomo;
 
 /**
- *
  * @author Emmanuelito18
  */
 public class CortesiaDeMayordomo {
