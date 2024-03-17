@@ -27,7 +27,7 @@ public class LaunchRequestHandler implements RequestHandler{
         //genera y devuelve una respuesta de saludo básica con objetos de respuesta como Voz, Tarjeta y Repetición
         String speechText="Bienvenidos a Cortesía de mayordomo, esta skill ha dio crada por: Emmanuelito18";
         return input.getResponseBuilder().withSpeech(speechText)
-                .withSimpleCard("Bienvenida", speechText)/*.withReprompt(speechText)*/.build();
+                .withSimpleCard("Cortesía de mayordomo", speechText)/*.withReprompt(speechText)*/.build();
         /*
         El método withRepromt() sirve para esperar una respuesta del usuario
         (se susele utiliar para confirmar cosas o preguntar cosas)
