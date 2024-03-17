@@ -14,6 +14,16 @@ import java.util.Optional;
 /**
  * @author Emmanuelito18
  */
-public class CancelandStopIntentHandler {
+public class CancelandStopIntentHandler implements RequestHandler{
+    @Override
+    public boolean canHandle(HandlerInput input){
+        return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent")));
+    }
     
+    @Override
+    public Optional<Response> handle(HandlerInput input){
+        return input.getResponseBuilder().withSpeech("Hasta la próxima viejos sabrosos")
+                .withSimpleCard("Cortesía de mayordomo","Hasta la próxima viejos sabrosos")
+                .withShouldEndSession(true).build();
+    }
 }
