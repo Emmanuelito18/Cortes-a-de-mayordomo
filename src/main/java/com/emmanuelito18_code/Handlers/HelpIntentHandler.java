@@ -20,6 +20,19 @@ import java.util.Optional;
 /**
  * @author Emmanuelito18
  */
-public class HelpIntentHandler {
+public class HelpIntentHandler implements RequestHandler{
+    @Override
+    public boolean canHandle(HandlerInput input){
+        return input.matches(intentName("AMAZON.HelpIntent"));
+    }
     
+    @Override
+    public Optional<Response> handle(HandlerInput input){
+        String speechText="Esta alexa skill está diseñada especialmente para utilizarse en rutinas. "
+                + "Debido a que esta skill solo dice una frase para luego cerrarse, por favor "
+                + "configura esta skill en una rutina para usarla adecuadamente mediante la app de alexa";
+        return input.getResponseBuilder().withSpeech(speechText)
+                .withSimpleCard("Asbre esta skill", speechText).withReprompt(speechText)
+                .build();
+    }
 }
