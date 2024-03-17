@@ -14,6 +14,17 @@ import java.util.Optional;
 /**
  * @author Emmanuelito18
  */
-public class FallbackIntentHandler {
+public class FallbackIntentHandler implements RequestHandler{
+    @Override
+    public boolean canHandle(HandlerInput input){
+        return input.matches(intentName("AMAZON.FallbackIntent"));
+    }
     
+    @Override
+    public Optional<Response> handle(HandlerInput input){
+        String speechText="Lo siento, no lo sé. Prueba a decir ayuda para recibir ayuda sobre esta skill";
+        return input.getResponseBuilder().withSpeech(speechText)
+                .withSimpleCard("Cortesía de mayordomo", speechText).withReprompt(speechText)
+                .build();
+    }
 }
