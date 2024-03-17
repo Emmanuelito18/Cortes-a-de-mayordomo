@@ -5,7 +5,6 @@
 package com.emmanuelito18_code.Handlers;
 
 /**
- *
  * @author Emmanuelito18
  */
 public class FallbackIntentHandler {

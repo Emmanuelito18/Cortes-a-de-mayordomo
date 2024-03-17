@@ -21,7 +21,7 @@ public class LaunchRequestHandler implements RequestHandler{
         //devuelve verdadero si la solicitud entrante es LaunchRequest
         return input.matches(Predicates.requestType(LaunchRequest.class));
     }
-    
+
     @Override
     public Optional<Response> handle(HandlerInput input){
         //genera y devuelve una respuesta de saludo básica con objetos de respuesta como Voz, Tarjeta y Repetición
