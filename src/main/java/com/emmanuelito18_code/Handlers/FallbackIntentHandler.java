@@ -24,7 +24,7 @@ public class FallbackIntentHandler implements RequestHandler{
     public Optional<Response> handle(HandlerInput input){
         String speechText="Lo siento, no lo sé. Prueba a decir ayuda para recibir ayuda sobre esta skill";
         return input.getResponseBuilder().withSpeech(speechText)
-                .withSimpleCard("Cortesía de mayordomo", speechText).withReprompt(speechText)
+                .withSimpleCard("Mayordomo servicial", speechText).withReprompt(speechText)
                 .build();
     }
 }

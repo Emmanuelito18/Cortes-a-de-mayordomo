@@ -32,7 +32,7 @@ public class HelpIntentHandler implements RequestHandler{
                 + "Debido a que esta skill solo dice una frase para luego cerrarse, por favor "
                 + "configura esta skill en una rutina para usarla adecuadamente mediante la app de alexa";
         return input.getResponseBuilder().withSpeech(speechText)
-                .withSimpleCard("Cortesía de mayordomo", speechText).withReprompt(speechText)
+                .withSimpleCard("Mayordomo servicial", speechText).withReprompt(speechText)
                 .build();
     }
 }

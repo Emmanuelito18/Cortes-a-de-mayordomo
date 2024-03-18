@@ -23,7 +23,7 @@ public class CancelandStopIntentHandler implements RequestHandler{
     @Override
     public Optional<Response> handle(HandlerInput input){
         return input.getResponseBuilder().withSpeech("Hasta la próxima viejos sabrosos")
-                .withSimpleCard("Cortesía de mayordomo","Hasta la próxima viejos sabrosos")
+                .withSimpleCard("Mayordomo servicial","Hasta la próxima viejos sabrosos")
                 .withShouldEndSession(true).build();
     }
 }
