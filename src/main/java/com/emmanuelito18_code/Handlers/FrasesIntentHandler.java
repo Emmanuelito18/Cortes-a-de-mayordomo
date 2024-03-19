@@ -14,6 +14,16 @@ import java.util.Optional;
 /**
  * @author Emmanuelito18
  */
-public class FrasesIntentHandler {
+public class FrasesIntentHandler implements RequestHandler{
+    @Override
+    public boolean canHandle(HandlerInput input){
+        return input.matches(Predicates.intentName("FrasesIntent"));
+    }
     
+    @Override
+    public Optional<Response> handle(HandlerInput input){
+        String speechText="Esto es una prueba de mi skill de alexa";
+        return input.getResponseBuilder().withSpeech(speechText)
+                .withSimpleCard("Prueba de Mayordomo servicial", speechText).build();
+    }
 }
