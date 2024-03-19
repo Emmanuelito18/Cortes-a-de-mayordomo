@@ -18,9 +18,21 @@ import com.emmanuelito18_code.Handlers.SessionEndedRequestHandler;
 /**
  * @author Emmanuelito18
  */
-public class MayordomoServicial {
+public class MayordomoServicial extends SkillStreamHandler {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    private static Skill getSkill() {
+        return Skills.standard()
+                .addRequestHandlers(
+                        new CancelandStopIntentHandler(),
+                        //new HelloWorldIntentHandler(),
+                        new HelpIntentHandler(),
+                        new LaunchRequestHandler(),
+                        new SessionEndedRequestHandler())
+                .build();
     }
+
+    public MayordomoServicial() {
+        super(getSkill());
+    }
+
 }
