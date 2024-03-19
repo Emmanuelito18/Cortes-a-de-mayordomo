@@ -4,6 +4,17 @@
 
 package com.emmanuelito18_code.mayordomoServicial;
 
+//librerias de amazon alexa
+import com.amazon.ask.Skill;
+import com.amazon.ask.Skills;
+import com.amazon.ask.SkillStreamHandler;//libreria para decidir que debe hacer la skill
+
+//importación de los manipuladores hechos
+import com.emmanuelito18_code.Handlers.CancelandStopIntentHandler;
+import com.emmanuelito18_code.Handlers.FallbackIntentHandler;
+import com.emmanuelito18_code.Handlers.HelpIntentHandler;
+import com.emmanuelito18_code.Handlers.LaunchRequestHandler;
+import com.emmanuelito18_code.Handlers.SessionEndedRequestHandler;
 /**
  * @author Emmanuelito18
  */

@@ -16,7 +16,7 @@ import java.util.Optional;
  * @author Emmanuelito18
  */
 public class SessionEndedRequestHandler implements RequestHandler{
-    //Este manipulador se utilizará para limpieza tras la ejecución de la skilla
+    //Este manipulador se utilizará para limpieza tras la ejecución de la skill
     @Override
     public boolean canHandle(HandlerInput input){
         return input.matches(requestType(SessionEndedRequest.class));
