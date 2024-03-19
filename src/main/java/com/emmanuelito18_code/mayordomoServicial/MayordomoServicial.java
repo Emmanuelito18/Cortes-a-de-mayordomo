@@ -19,7 +19,7 @@ import com.emmanuelito18_code.Handlers.SessionEndedRequestHandler;
  * @author Emmanuelito18
  */
 public class MayordomoServicial extends SkillStreamHandler {
-
+    //Esta clase es la clase pincipal de la alexa skill y se conoce como controlador de transmision
     private static Skill getSkill() {
         return Skills.standard()
                 .addRequestHandlers(
