@@ -4,6 +4,13 @@
  */
 package com.emmanuelito18_code.Handlers;
 
+//librerias de amazon alexa
+import com.amazon.ask.dispatcher.request.handler.HandlerInput;
+import com.amazon.ask.dispatcher.request.handler.RequestHandler;
+import com.amazon.ask.model.Response;
+import com.amazon.ask.request.Predicates;
+
+import java.util.Optional;
 /**
  * @author Emmanuelito18
  */
