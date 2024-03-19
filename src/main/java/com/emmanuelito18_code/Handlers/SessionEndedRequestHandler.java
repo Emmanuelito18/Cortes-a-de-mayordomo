@@ -15,6 +15,15 @@ import java.util.Optional;
 /**
  * @author Emmanuelito18
  */
-public class SessionEndedRequestHandler {
+public class SessionEndedRequestHandler implements RequestHandler{
+    @Override
+    public boolean canHandle(HandlerInput input){
+        return input.matches(requestType(SessionEndedRequest.class));
+    }
     
+    @Override
+    public Optional<Response> handle(HandlerInput input){
+        //cualquier logica de limpieza va aquí
+        return input.getResponseBuilder().build();
+    }
 }
