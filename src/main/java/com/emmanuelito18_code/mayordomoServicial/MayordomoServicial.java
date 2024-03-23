@@ -15,6 +15,7 @@ import com.emmanuelito18_code.Handlers.FallbackIntentHandler;
 import com.emmanuelito18_code.Handlers.HelpIntentHandler;
 import com.emmanuelito18_code.Handlers.LaunchRequestHandler;
 import com.emmanuelito18_code.Handlers.SessionEndedRequestHandler;
+import com.emmanuelito18_code.Handlers.FrasesIntentHandler;
 /**
  * @author Emmanuelito18
  */
@@ -24,10 +25,11 @@ public class MayordomoServicial extends SkillStreamHandler {
         return Skills.standard()
                 .addRequestHandlers(
                         new CancelandStopIntentHandler(),
-                        //new HelloWorldIntentHandler(),
+                        new FrasesIntentHandler(),
                         new HelpIntentHandler(),
                         new LaunchRequestHandler(),
-                        new SessionEndedRequestHandler())
+                        new SessionEndedRequestHandler(),
+                        new FallbackIntentHandler())
                 .build();
     }
 
